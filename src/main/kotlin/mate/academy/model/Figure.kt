@@ -30,8 +30,10 @@ class Rectangle(
     override fun getArea(): Double = width * height
 
     override fun draw() {
-        println("Figure: rectangle, area: ${getArea()} sq. units, "
-                + "width: $width units, height: $height units, color: $color")
+        println(
+            "Figure: rectangle, area: ${getArea()} sq. units, " +
+                    "width: $width units, height: $height units, color: $color"
+        )
     }
 }
 
@@ -41,11 +43,17 @@ class RightTriangle(
     private val secondLeg: Double
 ) : Figure(color) {
 
-    override fun getArea(): Double = 0.5 * firstLeg * secondLeg
+    companion object {
+        private const val HALF = 0.5
+    }
+
+    override fun getArea(): Double = HALF * firstLeg * secondLeg
 
     override fun draw() {
-        println("Figure: right triangle, area: ${getArea()} sq. units, "
-                + "firstLeg: $firstLeg units, secondLeg: $secondLeg units, color: $color")
+        println(
+            "Figure: right triangle, area: ${getArea()} sq. units, " +
+                    "firstLeg: $firstLeg units, secondLeg: $secondLeg units, color: $color"
+        )
     }
 }
 
@@ -54,7 +62,11 @@ class Circle(
     private val radius: Double
 ) : Figure(color) {
 
-    override fun getArea(): Double = Math.PI * radius.pow(2)
+    companion object {
+        private const val POWER = 2.0
+    }
+
+    override fun getArea(): Double = Math.PI * radius.pow(POWER)
 
     override fun draw() {
         println("Figure: circle, area: ${getArea()} sq. units, radius: $radius units, color: $color")
@@ -68,10 +80,16 @@ class IsoscelesTrapezoid(
     private val height: Double
 ) : Figure(color) {
 
-    override fun getArea(): Double = 0.5 * (base1 + base2) * height
+    companion object {
+        private const val HALF = 0.5
+    }
+
+    override fun getArea(): Double = HALF * (base1 + base2) * height
 
     override fun draw() {
-        println("Figure: isosceles trapezoid, area: ${getArea()} sq. units, "
-                + "base1: $base1 units, base2: $base2 units, height: $height units, color: $color")
+        println(
+            "Figure: isosceles trapezoid, area: ${getArea()} sq. units, " +
+                    "base1: $base1 units, base2: $base2 units, height: $height units, color: $color"
+        )
     }
 }
