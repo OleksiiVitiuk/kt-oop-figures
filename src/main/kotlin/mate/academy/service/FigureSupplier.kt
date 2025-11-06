@@ -17,6 +17,7 @@ class FigureSupplier {
         private const val MIN_SIZE = 1.0
         private const val MAX_SIZE = 10.0
         private const val DEFAULT_RADIUS = 10.0
+        private val DEFAULT_COLOR = Color.WHITE
     }
 
     fun getRandomFigure(): Figure {
@@ -44,6 +45,6 @@ class FigureSupplier {
     }
 
     fun getDefaultFigure(): Figure {
-        return Circle(Color.WHITE, DEFAULT_RADIUS)
+        return Circle(DEFAULT_COLOR, DEFAULT_RADIUS)
     }
 }
