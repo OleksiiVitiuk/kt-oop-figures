@@ -3,11 +3,9 @@ package mate.academy
 import mate.academy.model.Figure
 import mate.academy.service.FigureSupplier
 
-class Main {
-    companion object {
-        const val TOTAL_FIGURES = 6
-        const val RANDOM_FIGURES_COUNT = 3
-    }
+object Main {
+    const val TOTAL_FIGURES = 6
+    const val RANDOM_FIGURES_COUNT = 3
 }
 
 fun main() {
